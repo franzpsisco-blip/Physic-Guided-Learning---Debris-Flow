@@ -45,7 +45,7 @@ project/
     synxflow/   # optional
 ```
 
-> All rasters must be co-registered (same CRS, resolution, extent, and grid alignment). Use a consistent NoData value.
+> All rasters must be co-registered (same CRS, resolution, extent, and grid alignment).
 
 ---
 
