@@ -1,24 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Chosica (Peru) – Debris-flow / landslide hybrid runout with SynxFlow,
-plus erosion–deposition proxy and publication-quality figures.
-
-Changes in this version
------------------------
-- Wall-clock stop-loss: 1.5 days (36 h).
-- Slightly more mobile rheology and thicker sources so material runs further
-  before stalling (~debris-flow / landslide intermediate).
-- Professional hillshade background (NaN filling, LightSource with dx, dy).
-- Runout GIF colourbar shortened (shrink=0.5).
-- All previous publication-quality charts (dimensionless time series + boxplots)
-  are preserved.
-
-IMPORTANT:
-The physical simulation stops around ~32 s not because of the stop-loss,
-but because the stable time step becomes extremely small once the flow
-thins out and is strongly resisted by friction. More wall-clock time does
-not increase the final physical time; more mobile rheology and/or thicker
-initial mass is what makes the runout extend further.
+plus erosion–deposition proxy.
 """
 
 import os
@@ -37,7 +20,7 @@ from matplotlib.colors import LightSource
 from matplotlib.ticker import FixedLocator
 import imageio.v2 as imageio
 from multiprocessing import Process
-from scipy import ndimage  # connected components
+from scipy import ndimage 
 
 # ---------------------------------------------------------------------
 # 0. PATHS & GLOBAL PARAMETERS
@@ -860,3 +843,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
