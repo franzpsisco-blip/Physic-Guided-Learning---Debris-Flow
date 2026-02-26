@@ -32,7 +32,7 @@ project/
       TSX_desc/ vlos.tif  incidence.tif  heading.tif
 
     stacks/
-      DEM_STACK.tif      # multi-band covariate stack (terrain + hydroclimatic + geotechnical)
+      COVARIABLE_STACK.tif      # multi-band covariate stack (terrain + hydroclimatic + geotechnical)
 
   outputs/
     3d_vel/
@@ -86,8 +86,8 @@ At minimum, the stack should include the following covariate groups (band order 
 - contributing drainage area (flow accumulation / specific contributing area)
 - extracted drainage / hydrological network (if encoded as a raster layer)
 
-**Hydroclimatic forcing / wetness proxies**
-- normalized rainfall or wetness forcing used as a saturation proxy (used in the SF term)
+**Hydroclimatic forcing/wetness proxies**
+- normalized rainfall
 - Topographic Wetness Index (**TWI**)
 
 **Deposition-domain metrics**
@@ -99,7 +99,7 @@ At minimum, the stack should include the following covariate groups (band order 
 
 **Kinematic indicators derived from 3D InSAR (from vE/vN/vU)**
 - total velocity magnitude
-- downslope direction / motion direction
+- downslope direction/motion direction
 - vertical-to-horizontal ratio (or equivalent vertical movement ratio)
 
 > Practical requirement: `DEM_STACK.tif` and `vE/vN/vU` must share the same grid (CRS/resolution/extent/alignment) and consistent velocity units (e.g., mm/yr).
